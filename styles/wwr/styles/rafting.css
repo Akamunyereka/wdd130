@@ -1,0 +1,191 @@
+/* -------------------------
+   GLOBAL RESET & VARIABLES
+-------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #055a05; /* forest green */
+  --secondary-color: #f4a261; /* warm sand */
+  --accent1-color: #264653; /* dark slate blue */
+  --accent2-color: #e9c46a; /* light golden yellow */
+  --heading-font: "Times New Roman", Georgia, serif;
+  --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* -------------------------
+   GLOBAL STYLES
+-------------------------- */
+body {
+  font-family: var(--body-font);
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+/* -------------------------
+   HEADER SECTION
+-------------------------- */
+header {
+  min-height: 60vh;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.6), rgba(4, 9, 30, 0.6)), url("images/banner.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+}
+
+/* NAVIGATION BAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 6%;
+}
+
+nav img {
+  width: 150px;
+  border-radius: 8px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul {
+  list-style: none;
+}
+
+.nav-links ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+  color: var(--accent2-color);
+}
+
+/* -------------------------
+   HERO SECTION
+-------------------------- */
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(38, 70, 83, 0.7); /* semi-transparent dark overlay */
+  padding: 2rem;
+  border-radius: 10px;
+  color: white;
+  width: 80%;
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1rem;
+}
+
+/* -------------------------
+   MAIN CONTENT SECTIONS
+-------------------------- */
+main {
+  padding: 2rem 10%;
+}
+
+section {
+  margin: 2rem 0;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--accent2-color);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+section p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.8;
+}
+
+/* -------------------------
+   FOOTER SECTION
+-------------------------- */
+footer {
+  background-color: var(--accent1-color);
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+}
+
+.socialmedia a img {
+  width: 30px;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.socialmedia a img:hover {
+  transform: scale(1.1);
+}
+
+/* -------------------------
+   RESPONSIVE DESIGN
+-------------------------- */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    text-align: center;
+  }
+
+  .nav-links ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .hero-text {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+}

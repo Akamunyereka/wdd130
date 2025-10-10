@@ -11,7 +11,7 @@
   --primary-color: #055a05; /* forest green */
   --secondary-color: #f4a261; /* warm sand */
   --accent1-color: #264653; /* dark slate blue */
-  --accent2-color: #e9c46a; /* light golden yellow */
+  --accent2-color: #e9c46a; /* golden yellow */
   --heading-font: "Times New Roman", Georgia, serif;
   --body-font: Arial, Helvetica, sans-serif;
 }
@@ -22,8 +22,8 @@
 body {
   font-family: var(--body-font);
   line-height: 1.6;
-  background-color: #96d878;
-  color: #acf10b;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 h1, h2 {
@@ -31,55 +31,50 @@ h1, h2 {
   color: var(--primary-color);
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
 /* -------------------------
-   HEADER SECTION
+   HEADER (GRID + FLEX)
 -------------------------- */
 header {
-  min-height: 5vh;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("images/banner.jpg");
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  width: 100%;
-}
-
-/* NAVIGATION BAR */
-nav {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 200px 1fr;
   align-items: center;
-  padding: 2% 6%;
+  background-color: var(--accent1-color);
+  color: white;
+  padding: 1rem 5%;
 }
 
-nav img {
-  width: 150px;
-  
+header img {
+  width: 100px;
   border-radius: 8px;
 }
 
-.nav-links {
-  flex: 1;
-  text-align: right;
+/* NAV uses FLEX inside HEADER GRID */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .nav-links ul {
   list-style: none;
+  display: flex;
+  gap: 2rem;
 }
 
-.nav-links ul li {
-  display: inline-block;
-  margin: 0 20px;
-}
-
-.nav-links ul li a {
+.nav-links a {
   text-decoration: none;
   color: white;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
-.nav-links ul li a:hover {
+.nav-links a:hover {
   color: var(--accent2-color);
 }
 
@@ -89,12 +84,12 @@ nav img {
 .hero {
   position: relative;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .hero img {
   width: 100%;
   height: auto;
-  display: block;
 }
 
 .hero-text {
@@ -102,7 +97,7 @@ nav img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(38, 70, 83, 0.7); /* semi-transparent dark overlay */
+  background: rgba(38, 70, 83, 0.7);
   padding: 2rem;
   border-radius: 10px;
   color: white;
@@ -115,35 +110,66 @@ nav img {
   margin-bottom: 1rem;
 }
 
-.hero-text p {
-  font-size: 1rem;
-}
-
 /* -------------------------
-   MAIN CONTENT SECTIONS
+   HISTORY SECTION (LAYOUT)
 -------------------------- */
-main {
+.history {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
   padding: 2rem 10%;
 }
 
-section {
-  margin: 2rem 0;
+.history img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-section h2 {
-  font-size: 1.8rem;
+.history h2 {
+  grid-column: 1 / -1;
+  border-bottom: 2px solid var(--accent2-color);
+  padding-bottom: 0.3rem;
   margin-bottom: 1rem;
+}
+
+/* -------------------------
+   ADVENTURE SECTION (FIVE FIGURES)
+-------------------------- */
+.adventures {
+  padding: 2rem 5%;
+  background-color: #fff;
+}
+
+.adventures h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
   border-bottom: 2px solid var(--accent2-color);
   display: inline-block;
-  padding-bottom: 0.3rem;
 }
 
-section p {
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.8;
+.adventure-gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
+.adventure-gallery figure {
+  width: 200px;
+  text-align: center;
+}
+
+.adventure-gallery img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.adventure-gallery figcaption {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: var(--accent1-color);
+}
 
 /* -------------------------
    FOOTER SECTION
@@ -151,22 +177,27 @@ section p {
 footer {
   background-color: var(--accent1-color);
   color: white;
-  text-align: center;
-  padding: 1.5rem 0;
-  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
 }
 
 footer p {
-  margin-bottom: 0.5rem;
+  margin: 0;
 }
 
-.socialmedia a img {
+footer .socialmedia {
+  display: flex;
+  gap: 1rem;
+}
+
+footer .socialmedia a img {
   width: 30px;
-  margin: 0 10px;
   transition: transform 0.3s ease;
 }
 
-.socialmedia a img:hover {
+footer .socialmedia a img:hover {
   transform: scale(1.1);
 }
 
@@ -174,21 +205,24 @@ footer p {
    RESPONSIVE DESIGN
 -------------------------- */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-  }
-
-  .nav-links {
+  header {
+    grid-template-columns: 1fr;
     text-align: center;
   }
 
-  .nav-links ul li {
-    display: block;
-    margin: 10px 0;
+  nav {
+    justify-content: center;
+  }
+
+  .history {
+    grid-template-columns: 1fr;
+  }
+
+  .adventure-gallery {
+    justify-content: center;
   }
 
   .hero-text {
     width: 90%;
-    font-size: 0.9rem;
   }
 }

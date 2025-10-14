@@ -1,44 +1,116 @@
-main{
-    max-width: 840px;
-}
-aside{
-    width: 20rem;
-    margin: 1rem;
-    border: 1px solid rgb(0,0,0.2);
-    padding: 1rem;
-    background-color: #eee;
-    color: #333;
-    text-align: center;
-}
-aside img{
-    width: 200px;
-    height: auto;
-}
-main img{
-    width: 100%;
-    height: auto;
-    border: 1px solid steelblue;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
-}
-p { padding: 0;}
+/* Professional styles for Akamunyereka Kevin's homepage */
 
-footer{
-    margin-top: 15px;
-    border-top: 1px solid #000;
-    text-align: center;
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+    color: #222;
 }
-nav a {
-    color:white;
-    padding: 10px;
-    display: block;
+
+header {
+    background: #003366;
+    color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
-h1 {
-    color: steelblue;
-}
+
 nav {
-    background-color: steelblue;
-    padding: 10px;
-    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+main h1 {
     text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #003366;
+}
+
+main img {
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+main p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+aside {
+    max-width: 350px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+aside h2 {
+    color: #003366;
+    margin-bottom: 1rem;
+}
+
+aside img {
+    width: 90%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+footer {
+    background: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0 1rem 0;
+    margin-top: 2rem;
+    font-size: 1rem;
+    border-top: 3px solid #ffd700;
+}
+
+.footer-details {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.footer-social {
+    margin-top: 0.7rem;
+}
+
+.footer-social a {
+    color: #ffd700;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+
+.footer-social a:hover {
+    color: #fff;
 }

@@ -27,12 +27,17 @@ nav {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    background-color: #0a3d62;
+    padding: 0.5rem;
+
 }
 
 nav a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
+    display: block;
+    padding: 0.5rem 1rem;
 }
 
 nav a:hover {
@@ -55,6 +60,9 @@ main img {
     height: auto;
     border-radius: 50%;
     margin: 1rem 0;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 0.2);
+    padding: 4px;
+    border: 3px solid #0a3d62;
 }
 
 p {
@@ -78,6 +86,11 @@ aside img {
     height: auto;
     margin: 1rem 0;
     border-radius: 4px;
+}
+
+h1 {
+    color: #0a3d62;
+    margin-bottom: 1rem;
 }
 
 /* Footer */

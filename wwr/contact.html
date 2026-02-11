@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="description"
       content="Contact White Water Rafting Adventures for trip reservations, questions, and customer support. Find our location, team, and message us online.">
-    <meta name="author" content="Kevin">
+    <meta name="author" content="Kevin Akamunyereka">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | White Water Rafting Adventures</title>
     <link rel="stylesheet" href="styles/rafting.css">
@@ -24,7 +24,7 @@
 
     <main>
         <section class="contact-hero">
-            <h1>Contact Us</h1>
+            <h1>Contact White Water Rafting Adventures</h1>
             <p>We’re here to help you plan your next unforgettable rafting adventure!</p>
         </section>
 
@@ -34,15 +34,15 @@
                 <h2>Our Office</h2>
                 <p><strong>Address:</strong><br>Jinja, Kampala-Uganda</p>
                 <p><strong>Phone:</strong><br>+256745144680</p>
-                <p><strong>Email:</strong><br><a
-                      href="mailto:info@whitewaterrafting.com">info@whitewaterrafting.com</a></p>
+                <p><strong>Email:</strong><br>
+                    <a href="mailto:info@whitewaterrafting.com">info@whitewaterrafting.com</a>
+                </p>
 
                 <iframe
                   src="https://www.google.com/maps?q=Jinja%20Nile%20Kampala%20Uganda&output=embed"
                   allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                   title="Jinja Nile Kampala Uganda Map">
                 </iframe>
-
             </div>
 
             <!-- Employee Profiles -->
@@ -83,29 +83,32 @@
                 <fieldset>
                     <legend>Message Purpose</legend>
 
-                    <label>
-                        <input type="radio" name="purpose" value="general" required>
+                    <label for="purpose-general">
+                        <input type="radio" id="purpose-general" name="purpose" value="general"
+                          required>
                         General Inquiry
                     </label>
 
-                    <label>
-                        <input type="radio" name="purpose" value="reservation">
+                    <label for="purpose-reservation">
+                        <input type="radio" id="purpose-reservation" name="purpose"
+                          value="reservation">
                         Reservation Question
                     </label>
 
-                    <label>
-                        <input type="radio" name="purpose" value="website">
+                    <label for="purpose-website">
+                        <input type="radio" id="purpose-website" name="purpose" value="website">
                         Website Suggestion
                     </label>
                 </fieldset>
 
                 <fieldset>
                     <legend>Your Message</legend>
+
                     <label for="message">Message</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
 
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="newsletter">
+                    <label for="newsletter" class="checkbox-label">
+                        <input type="checkbox" id="newsletter" name="newsletter">
                         Please subscribe me to the monthly newsletter
                     </label>
                 </fieldset>
@@ -116,11 +119,11 @@
     </main>
 
     <footer>
-        <p>© 2026 White Water Rafting Adventures | Kevin</p>
-        <nav class="social-links">
-            <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
-            <a href="#"><img src="images/linkedin.svg" alt="LinkedIn"></a>
-            <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
+        <p>© 2026 White Water Rafting Adventures | Kevin Akamunyereka</p>
+        <nav class="socialmedia">
+            <a href="#"><img src="images/facebook.svg" alt="Facebook social media icon"></a>
+            <a href="#"><img src="images/linkedin.svg" alt="LinkedIn social media icon"></a>
+            <a href="#"><img src="images/instagram.svg" alt="Instagram social media icon"></a>
         </nav>
     </footer>
 </body>

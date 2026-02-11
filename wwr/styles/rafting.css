@@ -174,7 +174,6 @@
 /* ===============================
    FOOTER STYLES
    =============================== */
-
 footer {
     background-color: #1b4f72;
     color: #ffffff;
@@ -187,23 +186,28 @@ footer p {
     font-size: 0.9rem;
 }
 
-.social-links {
+footer .socialmedia {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
-.social-links a {
+footer .socialmedia a {
     display: inline-block;
 }
 
-.social-links img {
+footer .socialmedia img {
     width: 28px;
     height: 28px;
     filter: brightness(0) invert(1);
 }
 
-.social-links a:hover img,
-.social-links a:focus img {
+footer .socialmedia a:hover img,
+footer .socialmedia a:focus img {
     transform: scale(1.1);
+}
+
+.btn-primary:focus {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
 }

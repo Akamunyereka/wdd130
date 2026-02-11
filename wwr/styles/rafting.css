@@ -1,210 +1,209 @@
-/* =====================
-   Root Variables
-===================== */
-:root {
-    --primary-color: #0a3d62;
-    --secondary-color: #1e6091;
-    --accent-color: #ffffff;
-    --text-dark: #222222;
-    --text-light: #ffffff;
-    --overlay-dark: rgba(0, 0, 0, 0.6);
-}
+/* ===============================
+   CONTACT PAGE LAYOUT & DESIGN
+   =============================== */
 
-/* =====================
-   Universal Reset
-===================== */
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* =====================
-   Base Styles
-===================== */
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--text-dark);
-    line-height: 1.6;
-    background-color: #f4f7fa;
-}
-
-/* =====================
-   Header Layout (Grid)
-===================== */
-header.header-grid {
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    align-items: center;
-    background-color: var(--primary-color);
-    padding: 1rem;
-}
-
-header.header-grid img {
-    max-width: 120px;
-}
-
-/* =====================
-   Navigation (Flex)
-===================== */
-nav {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-nav a {
-    color: var(--text-light);
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    font-weight: 700;
-    font-size: 1.1rem;
-}
-
-nav a:hover {
-    background-color: var(--secondary-color);
-    border-radius: 4px;
-}
-
-/* =====================
-   Hero Section
-===================== */
-.hero {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.hero img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.hero h1 {
-    position: absolute;
-    top: 20%;
-    left: 5%;
-    color: var(--text-light);
-    background-color: var(--overlay-dark);
-    padding: 0.75rem 1.25rem;
-    border-radius: 4px;
-    font-size: 2.2rem;
-}
-
-/* Hero Article Overlay */
-.hero article {
-    position: absolute;
-    bottom: 10%;
-    left: 5%;
-    right: 5%;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 1rem;
-    border-radius: 6px;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-.hero article img {
-    width: 150px;
-    float: right;
-    border-radius: 4px;
-}
-
-.hero article p {
-    font-size: 1rem;
-}
-
-/* =====================
-   Main Layout
-===================== */
-main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-/* =====================
-   History Section
-===================== */
-.history {
-    margin: 2rem 0;
-    padding: 1.5rem;
-    background-color: #ffffff;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.history h2 {
-    border-bottom: 3px solid var(--primary-color);
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-}
-
-/* =====================
-   Adventures Section
-===================== */
-.adventures {
-    margin: 2rem 0;
-    padding: 1.5rem;
-    background-color: #ffffff;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.adventures h2 {
-    border-bottom: 3px solid var(--primary-color);
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
+.contact-hero {
     text-align: center;
+    padding: 2rem 1rem;
 }
 
-.adventure-gallery {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
-}
-
-.adventure-gallery figure {
-    text-align: center;
-}
-
-.adventure-gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-}
-
-.adventure-gallery figcaption {
-    margin-top: 0.5rem;
-    font-weight: 600;
-}
-
-/* =====================
-   Footer
-===================== */
-footer {
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    padding: 1.5rem 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-footer p {
+.contact-hero h1 {
     margin-bottom: 0.5rem;
 }
 
-footer nav.socialmedia a {
-    margin: 0 0.5rem;
-    text-decoration: none;
+.contact-hero p {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-footer nav.socialmedia img {
-    width: 32px;
-    height: auto;
+/* Two-column layout: company info + team */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+}
+
+/* Company Info Card */
+.company-info {
+    background-color: #f7f9fb;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.company-info h2 {
+    margin-bottom: 1rem;
+}
+
+.company-info p {
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.company-info iframe {
+    width: 100%;
+    height: 240px;
+    border: none;
+    margin-top: 1rem;
+    border-radius: 6px;
+}
+
+/* Team Section */
+.team {
+    background-color: #f7f9fb;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.team h2 {
+    margin-bottom: 1rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.5rem;
+}
+
+.team figure {
+    text-align: center;
+}
+
+.team img {
+    width: 100%;
+    max-width: 140px;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.team figcaption {
+    font-size: 0.9rem;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    max-width: 750px;
+    margin: 0 auto 4rem;
+    padding: 0 1rem;
+}
+
+.contact-form-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form {
+    background-color: #f7f9fb;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+/* Fieldsets */
+.contact-form fieldset {
+    border: none;
+    margin-bottom: 1.5rem;
+    padding: 0;
+}
+
+.contact-form legend {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Labels and Inputs */
+.contact-form label {
+    display: block;
+    margin-top: 0.75rem;
+    font-weight: 500;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.25rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Radio Buttons */
+.contact-form input[type="radio"] {
+    margin-right: 0.4rem;
+}
+
+/* Checkbox */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* Submit Button */
+.btn-primary {
+    display: inline-block;
+    background-color: #1b4f72;
+    color: #ffffff;
+    padding: 0.75rem 1.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #145a8a;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+}
+
+/* ===============================
+   FOOTER STYLES
+   =============================== */
+
+footer {
+    background-color: #1b4f72;
+    color: #ffffff;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-links a {
+    display: inline-block;
+}
+
+.social-links img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1);
+}
+
+.social-links a:hover img,
+.social-links a:focus img {
+    transform: scale(1.1);
 }

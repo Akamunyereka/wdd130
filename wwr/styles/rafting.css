@@ -36,7 +36,6 @@ header {
 
 .logo {
     width: 80px;
-    height: auto;
 }
 
 nav {
@@ -53,12 +52,12 @@ nav a {
 
 nav a:hover {
     background-color: var(--primary-color);
-    color: var(--accent2-color);
     border-radius: 4px;
 }
 
 h1,
-h2 {
+h2,
+h3 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
@@ -71,7 +70,6 @@ article {
     padding: 8px;
 }
 
-/* HERO SECTION */
 .hero {
     position: relative;
 }
@@ -84,47 +82,83 @@ article {
 
 .hero h1 {
     position: absolute;
-    top: 20px;
+    bottom: 20px;
+    left: 0;
     width: 100%;
     padding: 16px;
     text-align: center;
-    opacity: 0.8;
-    background-color: var(--accent1-color);
+    background-color: rgba(11, 37, 69, 0.85);
     color: #ffffff;
 }
 
-.hero article {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 16px;
-    border-radius: 8px;
+/* Newsletter */
+.newsletter form {
+    display: grid;
+    gap: 10px;
+    max-width: 400px;
 }
 
-.hero article img {
-    float: right;
-    width: 125px;
-    margin-left: 16px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.newsletter input {
+    padding: 8px;
 }
 
-section {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+.newsletter button {
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Grid Layout */
+.grid-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.grid-content img {
+    width: 100%;
+    height: auto;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: var(--secondary-color);
+    color: #ffffff;
 }
 
 footer {
     background-color: var(--secondary-color);
     text-align: center;
     padding: 16px;
-}
-
-footer p {
-    margin-bottom: 8px;
 }
 
 .socialmedia a {
@@ -134,5 +168,4 @@ footer p {
 
 .socialmedia img {
     width: 32px;
-    height: 32px;
 }
